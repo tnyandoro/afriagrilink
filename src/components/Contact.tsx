@@ -1,58 +1,71 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Clock, Globe } from 'lucide-react';
+import React, { useState } from "react";
+import { Mail, Phone, MapPin, Send, Clock, Globe } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     const { name, value } = e.target;
-    setFormData(prevState => ({
+    setFormData((prevState) => ({
       ...prevState,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission logic here
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
     // Reset form
     setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
     });
-    alert('Thank you for your message! We will get back to you soon.');
+    alert("Thank you for your message! We will get back to you soon.");
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 to-green-50">
+    <section
+      id="contact"
+      className="py-20 bg-gradient-to-br from-gray-50 to-green-50"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-[#6B4F1D] mb-6">
             Get In Touch
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Ready to transform your agricultural business? We're here to help farmers, 
-            logistics partners, and buyers across Africa connect and thrive.
+            Ready to transform your agricultural business? We're here to help
+            farmers, logistics partners, and buyers across Africa connect and
+            thrive.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="bg-white rounded-2xl shadow-xl p-8">
-            <h3 className="text-2xl font-bold text-[#6B4F1D] mb-6">Send us a Message</h3>
-            
+            <h3 className="text-2xl font-bold text-[#6B4F1D] mb-6">
+              Send us a Message
+            </h3>
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Full Name *
                   </label>
                   <input
@@ -66,9 +79,12 @@ const Contact = () => {
                     placeholder="Your full name"
                   />
                 </div>
-                
+
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Email Address *
                   </label>
                   <input
@@ -85,7 +101,10 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                <label
+                  htmlFor="subject"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
                   Subject *
                 </label>
                 <select
@@ -99,7 +118,9 @@ const Contact = () => {
                   <option value="">Select a subject</option>
                   <option value="farmer">I'm a Farmer - Want to Join</option>
                   <option value="logistics">I'm a Logistics Provider</option>
-                  <option value="buyer">I'm a Buyer - Interested in Products</option>
+                  <option value="buyer">
+                    I'm a Buyer - Interested in Products
+                  </option>
                   <option value="partnership">Partnership Opportunities</option>
                   <option value="support">Technical Support</option>
                   <option value="other">Other</option>
@@ -107,7 +128,10 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
                   Message *
                 </label>
                 <textarea
@@ -136,8 +160,10 @@ const Contact = () => {
           <div className="space-y-8">
             {/* Contact Details */}
             <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h3 className="text-2xl font-bold text-[#6B4F1D] mb-6">Contact Information</h3>
-              
+              <h3 className="text-2xl font-bold text-[#6B4F1D] mb-6">
+                Contact Information
+              </h3>
+
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="bg-[#4CAF50] p-3 rounded-full flex-shrink-0">
@@ -156,8 +182,10 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-[#6B4F1D] mb-1">Phone</h4>
-                    <p className="text-gray-700">+254 700 123 456 (Kenya)</p>
-                    <p className="text-gray-700">+27 11 234 5678 (South Africa)</p>
+                    <p className="text-gray-700">+263 700 123 456 (Harare)</p>
+                    <p className="text-gray-700">
+                      +27 11 234 5678 (South Africa)
+                    </p>
                   </div>
                 </div>
 
@@ -166,9 +194,11 @@ const Contact = () => {
                     <MapPin className="text-white" size={20} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-[#6B4F1D] mb-1">Headquarters</h4>
-                    <p className="text-gray-700">Nairobi, Kenya</p>
-                    <p className="text-gray-700">Cape Town, South Africa</p>
+                    <h4 className="font-semibold text-[#6B4F1D] mb-1">
+                      Headquarters
+                    </h4>
+                    <p className="text-gray-700">Harare, Zimbabwe</p>
+                    <p className="text-gray-700">Johannesburg, South Africa</p>
                   </div>
                 </div>
 
@@ -177,9 +207,15 @@ const Contact = () => {
                     <Clock className="text-white" size={20} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-[#6B4F1D] mb-1">Support Hours</h4>
-                    <p className="text-gray-700">Monday - Friday: 8:00 AM - 6:00 PM</p>
-                    <p className="text-gray-700">Saturday: 9:00 AM - 2:00 PM (EAT)</p>
+                    <h4 className="font-semibold text-[#6B4F1D] mb-1">
+                      Support Hours
+                    </h4>
+                    <p className="text-gray-700">
+                      Monday - Friday: 8:00 AM - 6:00 PM
+                    </p>
+                    <p className="text-gray-700">
+                      Saturday: 9:00 AM - 2:00 PM (EAT)
+                    </p>
                   </div>
                 </div>
               </div>
@@ -187,13 +223,17 @@ const Contact = () => {
 
             {/* Map Placeholder */}
             <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h3 className="text-2xl font-bold text-[#6B4F1D] mb-6">Our Presence</h3>
-              
+              <h3 className="text-2xl font-bold text-[#6B4F1D] mb-6">
+                Our Presence
+              </h3>
+
               <div className="bg-gradient-to-br from-[#4CAF50] to-[#2196F3] rounded-xl p-8 text-white text-center">
                 <Globe size={64} className="mx-auto mb-4 text-[#FFA726]" />
                 <h4 className="text-xl font-bold mb-2">15 SADC Countries</h4>
-                <p className="opacity-90 mb-4">Active in all Southern African Development Community nations</p>
-                
+                <p className="opacity-90 mb-4">
+                  Active in all Southern African Development Community nations
+                </p>
+
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>• South Africa</div>
                   <div>• Kenya</div>
