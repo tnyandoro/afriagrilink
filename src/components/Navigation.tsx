@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Menu, X, Globe } from "lucide-react";
-import logo from "../assets/images/logo.jpg"; // Adjust path if needed
+import logo from "../assets/images/logo.png"; // Adjust path if needed
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,7 +9,7 @@ const Navigation = () => {
   const languages = ["EN", "SW", "PT", "FR"];
 
   return (
-    <nav className="bg-[#6B4F1D] text-white sticky top-0 z-50">
+    <nav className="bg-[#f3f2f0] sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -17,7 +17,7 @@ const Navigation = () => {
             <img
               src={logo}
               alt="AfriAgriLink Logo"
-              className="h-16 w-auto object-contain"
+              className="h-20 w-auto object-contain"
             />
           </div>
 
