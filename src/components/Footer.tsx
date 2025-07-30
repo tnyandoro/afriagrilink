@@ -1,46 +1,71 @@
-import React from 'react';
-import { Facebook, Twitter, Instagram, Linkedin, Youtube, Mail, Phone, MapPin, Globe } from 'lucide-react';
+import React from "react";
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Youtube,
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+} from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
     platform: [
-      { name: 'About AfriAgriLink', href: '#about' },
-      { name: 'How It Works', href: '#how-it-works' },
-      { name: 'Marketplace', href: '#marketplace' },
-      { name: 'Success Stories', href: '#testimonials' },
-      { name: 'SADC Alignment', href: '#sadc' }
+      { name: "About AfriAgriLink", href: "#about" },
+      { name: "How It Works", href: "#how-it-works" },
+      { name: "Marketplace", href: "#marketplace" },
+      { name: "Success Stories", href: "#testimonials" },
+      { name: "SADC Alignment", href: "#sadc" },
     ],
     services: [
-      { name: 'For Farmers', href: '#farmers' },
-      { name: 'For Logistics', href: '#logistics' },
-      { name: 'For Buyers', href: '#buyers' },
-      { name: 'Mobile App', href: '#mobile' },
-      { name: 'API Integration', href: '#api' }
+      { name: "For Farmers", href: "#farmers" },
+      { name: "For Logistics", href: "#logistics" },
+      { name: "For Buyers", href: "#buyers" },
+      { name: "Mobile App", href: "#mobile" },
+      { name: "API Integration", href: "#api" },
     ],
     support: [
-      { name: 'Help Center', href: '#help' },
-      { name: 'Contact Us', href: '#contact' },
-      { name: 'Documentation', href: '#docs' },
-      { name: 'Community Forum', href: '#forum' },
-      { name: 'Training Resources', href: '#training' }
+      { name: "Help Center", href: "#help" },
+      { name: "Contact Us", href: "#contact" },
+      { name: "Documentation", href: "#docs" },
+      { name: "Community Forum", href: "#forum" },
+      { name: "Training Resources", href: "#training" },
     ],
     legal: [
-      { name: 'Privacy Policy', href: '#privacy' },
-      { name: 'Terms of Service', href: '#terms' },
-      { name: 'Cookie Policy', href: '#cookies' },
-      { name: 'Data Protection', href: '#data' },
-      { name: 'Compliance', href: '#compliance' }
-    ]
+      { name: "Privacy Policy", href: "#privacy" },
+      { name: "Terms of Service", href: "#terms" },
+      { name: "Cookie Policy", href: "#cookies" },
+      { name: "Data Protection", href: "#data" },
+      { name: "Compliance", href: "#compliance" },
+    ],
   };
 
   const socialLinks = [
-    { name: 'Facebook', icon: Facebook, href: '#', color: 'hover:text-blue-600' },
-    { name: 'Twitter', icon: Twitter, href: '#', color: 'hover:text-blue-400' },
-    { name: 'Instagram', icon: Instagram, href: '#', color: 'hover:text-pink-600' },
-    { name: 'LinkedIn', icon: Linkedin, href: '#', color: 'hover:text-blue-700' },
-    { name: 'YouTube', icon: Youtube, href: '#', color: 'hover:text-red-600' }
+    {
+      name: "Facebook",
+      icon: Facebook,
+      href: "#",
+      color: "hover:text-blue-600",
+    },
+    { name: "Twitter", icon: Twitter, href: "#", color: "hover:text-blue-400" },
+    {
+      name: "Instagram",
+      icon: Instagram,
+      href: "#",
+      color: "hover:text-pink-600",
+    },
+    {
+      name: "LinkedIn",
+      icon: Linkedin,
+      href: "#",
+      color: "hover:text-blue-700",
+    },
+    { name: "YouTube", icon: Youtube, href: "#", color: "hover:text-red-600" },
   ];
 
   return (
@@ -57,10 +82,11 @@ const Footer = () => {
                 </div>
                 <span className="text-2xl font-bold">AfriAgriLink</span>
               </div>
-              
+
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Connecting Africa's farmers to global markets through innovative digital 
-                platforms, sustainable logistics, and transparent trade practices.
+                Connecting Africa's farmers to global markets through innovative
+                digital platforms, sustainable logistics, and transparent trade
+                practices.
               </p>
 
               {/* Contact Info */}
@@ -75,7 +101,7 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin size={16} className="text-[#FFA726]" />
-                  <span className="text-gray-300">Nairobi, Kenya</span>
+                  <span className="text-gray-300">Harare, Zimbabwe</span>
                 </div>
               </div>
 
@@ -96,11 +122,16 @@ const Footer = () => {
 
             {/* Platform Links */}
             <div>
-              <h3 className="text-lg font-semibold mb-6 text-[#FFA726]">Platform</h3>
+              <h3 className="text-lg font-semibold mb-6 text-[#FFA726]">
+                Platform
+              </h3>
               <ul className="space-y-3">
                 {footerLinks.platform.map((link) => (
                   <li key={link.name}>
-                    <a href={link.href} className="text-gray-300 hover:text-white transition-colors">
+                    <a
+                      href={link.href}
+                      className="text-gray-300 hover:text-white transition-colors"
+                    >
                       {link.name}
                     </a>
                   </li>
@@ -110,11 +141,16 @@ const Footer = () => {
 
             {/* Services Links */}
             <div>
-              <h3 className="text-lg font-semibold mb-6 text-[#4CAF50]">Services</h3>
+              <h3 className="text-lg font-semibold mb-6 text-[#4CAF50]">
+                Services
+              </h3>
               <ul className="space-y-3">
                 {footerLinks.services.map((link) => (
                   <li key={link.name}>
-                    <a href={link.href} className="text-gray-300 hover:text-white transition-colors">
+                    <a
+                      href={link.href}
+                      className="text-gray-300 hover:text-white transition-colors"
+                    >
                       {link.name}
                     </a>
                   </li>
@@ -124,11 +160,16 @@ const Footer = () => {
 
             {/* Support Links */}
             <div>
-              <h3 className="text-lg font-semibold mb-6 text-[#2196F3]">Support</h3>
+              <h3 className="text-lg font-semibold mb-6 text-[#2196F3]">
+                Support
+              </h3>
               <ul className="space-y-3">
                 {footerLinks.support.map((link) => (
                   <li key={link.name}>
-                    <a href={link.href} className="text-gray-300 hover:text-white transition-colors">
+                    <a
+                      href={link.href}
+                      className="text-gray-300 hover:text-white transition-colors"
+                    >
                       {link.name}
                     </a>
                   </li>
@@ -144,11 +185,11 @@ const Footer = () => {
             <div>
               <h3 className="text-2xl font-bold mb-4">Stay Updated</h3>
               <p className="text-gray-300 leading-relaxed">
-                Get the latest updates on market prices, new features, and success stories 
-                from the AfriAgriLink community.
+                Get the latest updates on market prices, new features, and
+                success stories from the AfriAgriLink community.
               </p>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4">
               <input
                 type="email"
@@ -194,7 +235,9 @@ const Footer = () => {
         <div className="border-t border-[#8B6F2D] py-6">
           <div className="text-center">
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#4CAF50] to-[#2196F3] px-4 py-2 rounded-full">
-              <span className="text-sm font-medium">🌍 Proudly serving all 15 SADC countries</span>
+              <span className="text-sm font-medium">
+                🌍 Proudly serving all 15 SADC countries
+              </span>
             </div>
           </div>
         </div>
