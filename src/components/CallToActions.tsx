@@ -15,6 +15,29 @@ const CallToActions = () => {
           </p>
         </div>
 
+        {/* Synthesia Video Embed */}
+        <div className="mb-16 max-w-4xl mx-auto">
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl" style={{ paddingBottom: '56.25%', height: 0 }}>
+            <iframe
+              src="https://share.synthesia.io/embeds/videos/c4e7c29f-4545-4046-8c04-7dc111393222"
+              loading="lazy"
+              title="Synthesia video player - AfriAgriLink"
+              allow="encrypted-media; fullscreen;"
+              style={{
+                position: 'absolute',
+                width: '100%',
+                height: '100%',
+                top: 0,
+                left: 0,
+                border: 'none',
+                padding: 0,
+                margin: 0,
+                overflow: 'hidden'
+              }}
+            />
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Farmers CTA */}
           <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 md:p-12">
